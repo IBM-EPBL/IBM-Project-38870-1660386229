@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DIGITAL NATURALIST</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{{url_for('register')}}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Digital Naturalist</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{{url_for('home')}}">Home</a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- form -->
+
+  <style>
+
+    header{
+      margin-bottom:25px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight: bold;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Full-width input fields */
+    input[type=text], input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 15px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    /* Set a style for the submit button */
+
+    .button{
+    background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .registerbtn:hover {
+      opacity: 1;
+    }
+
+    /* Add a blue text color to links */
+    a {
+      color: dodgerblue;
+    }
+
+    /* Set a grey background color and center the text of the "sign in" section */
+    .signin {
+      background-color: #f1f1f1;
+      text-align: center;
+    }
+    .container
+    {
+    text-align:center;
+    width: 40%;
+    }
+    .box
+    {
+    border: 1px solid ;
+    border-radius:10px;
+    }
+    .center
+    {
+    display:grid;
+    }
+    .button
+    {
+    display: grid;
+    width:30%;
+    margin:auto;
+    }
+  </style>
+
+  <form action="" method="post">
+    <div class="container box">
+      <br>
+      <h1>REGISTER</h1>
+        {{ form.hidden_tag() }}<br>
+      <label for="name"><b>Username</b></label>
+        {{ form.username (id="Username") }}<br><br>
+         <label for="email"><b>Phonenumber</b></label>
+        {{ form.phonenum }}<br><br>
+        <label for="psw"><b>Password</b></label>
+        {{ form.password }}<br><br>
+
+        {{ form.submit(class="btn btn-success button",value="Register") }}<br><br>
+    {{ error }}
+
+
+    </div>
+<br>
+    <div class="container signin">
+      <p>Already have an account? <a href="{{url_for('login')}}">Login</a>.</p>
+    </div>
+
+  </form>
+</div>
+  <!-- End form -->
+
+</body>
+ <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer ftr">
+
+    <div class="container">
+        <div class="social-links d-flex mt-4" style="justify-content:center">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+
+    </div>
+<br>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+<style>
+    .ftr
+    {
+    font-size: 14px;
+  background-color: var(--color-primary);
+  padding: 5px 0;
+  color: white;
+    }
+</style>
+
+</html>

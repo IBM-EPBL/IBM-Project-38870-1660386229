@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DIGITAL NATURALIST - CODEXX</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="favicon.png" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Digital Naturalist</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#stats-counter">Species</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><a href="{{url_for('login')}}">Login <i class="bi bi-box-arrow-in-right"></i></a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row-right justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Digital Naturalist</h2>
+            <p data-aos="fade-up">AI - ENABLED TOOL FOR BIODIVERSITY RESEARCH</p>
+            <a data-aos="fade-up" data-aos-delay="200" href="{{url_for('login')}}" class="btn-get-started">Get Started <i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(static/images/Nature/img-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-5.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>About Us</h2>
+          <p>Aperiam dolorum et et wuia molestias qui eveniet numquam nihil porro incidunt dolores placeat sunt id nobis omnis tiledo stran delop</p>
+        </div>
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <h3>Voluptatem dignissimos provident quasi corporis</h3>
+            <p>Ut fugiat ut sunt quia veniam. Voluptate perferendis perspiciatis quod nisi et. Placeat debitis quia recusandae odit et consequatur voluptatem. Dignissimos pariatur consectetur fugiat voluptas ea.</p>
+            <p>Temporibus nihil enim deserunt sed ea. Provident sit expedita aut cupiditate nihil vitae quo officia vel. Blanditiis eligendi possimus et in cum. Quidem eos ut sint rem veniam qui. Ut ut repellendus nobis tempore doloribus debitis explicabo similique sit. Accusantium sed ut omnis beatae neque deleniti repellendus.</p>
+          </div>
+          <div class="col-lg-6">
+            <div class="content ps-0 ps-lg-5">
+              <p class="fst-italic">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+              </ul>
+              <p>
+                Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <img src="https://images.pexels.com/photos/6796912/pexels-photo-6796912.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Happy Clients</strong> consequuntur quae diredo para mesta</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Projects</strong> adipisci atque cum quia aut</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="453" data-purecounter-duration="1" class="purecounter"></span>
+              <p><strong>Hours Of Support</strong> aut commodi quaerat</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <h3>Check out for more rare species in the world</h3>
+        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>RARE SPECIES</h2>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6 d-flex tooltip" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img style="width: 500px;" src="static/images/Rare species/Angel Shark.jpeg" class="img-fluid" alt="">
+              <h4>ANGEL SHARK</h4>
+                <span class="tooltiptext">
+                    Count: 26 species<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Chordata<br>
+                    Class:	Chondrichthyes<br>
+                    Subclass:	Elasmobranchii<br>
+                    Infraclass:	Euselachii<br>
+                    Superorder:	Selachimorpha
+                </span>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex tooltip" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <img src="static/images/Rare species/Baobab tree.jpg" class="img-fluid" alt="">
+              <h4>BAOBAB TREE</h4>
+                <span class="tooltiptext">
+                    Count: one million<br>
+                    Kingdom:	Plantae<br>
+                    Division:	Magnoliophyta<br>
+                    Class:	Magnoliopsida<br>
+                    Order:	Malvales<br>
+                    Family:	Malvaceae<br>
+                    Genus:	Adansonia
+                </span>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex tooltip" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img style="width:500px; height:260px" src="static/images/Rare species/Barbara’s Buttons.jpg" class="img-fluid" alt="">
+              <h4>Barbara’s Buttons</h4>
+                <span class="tooltiptext">
+                    Count: 5<br>
+                    Kingdom:	Plantae<br>
+                    Clade:	Tracheophytes<br>
+                    Clade:	Angiosperms<br>
+                    Order:	Asterales<br>
+                    Family:	Asteraceae<br>
+                    Subfamily:	Asteroideae
+                </span>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex tooltip" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="static/images/Rare species/BlackRhino-Sumatran Rhinoceros.jpg" class="img-fluid" alt="">
+              <h4>Sumatran Rhinoceros</h4>
+                <span class="tooltiptext">
+                    Count: Fewer then 80<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Chordata<br>
+                    Class:	Mammalia<br>
+                    Order:	Perissodactyla<br>
+                    Family:	Rhinocerotidae<br>
+                    Genus:	Dicerorhinus<br>
+                    Species:	D. sumatrensis
+                </span>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex tooltip" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="static/images/Rare species/Peacock tarantula.jpg" class="img-fluid" alt="">
+              <h4>Peacock tarantula</h4>
+                <span class="tooltiptext">
+                    Count: 1,040 species<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Arthropoda<br>
+                    Subphylum:	Chelicerata<br>
+                    Class:	Arachnida<br>
+                    Order:	Araneae<br>
+                    Infraorder:	Mygalomorphae<br>
+                    Family:	Theraphosidae<br>
+                    Genus:	Poecilotheria<br>
+                    Species:	P. metallica
+                </span>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-xl-4 col-md-6 d-flex tooltip" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <img src="static/images/Rare species/Resplendent quetzal (Pharomachrus mocinno).jpeg" class="img-fluid" alt="">
+              <h4>Resplendent quetzal</h4>
+                <span class="tooltiptext">
+                    Count: 50000<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Chordata<br>
+                    Class:	Aves<br>
+                    Order:	Trogoniformes<br>
+                    Family:	Trogonidae<br>
+                    Genus:	Pharomachrus<br>
+                    Species:	P. mocinno
+                </span>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Impact</span>
+          </a>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contact Us</h4>
+          <p>
+            A108 Adam Street <br>
+            New York, NY 535022<br>
+            United States <br><br>
+            <strong>Phone:</strong> +1 5589 55488 55<br>
+            <strong>Email:</strong> info@example.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+      </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/javascript/main.js"></script>
+
+</body>
+
+</html>
