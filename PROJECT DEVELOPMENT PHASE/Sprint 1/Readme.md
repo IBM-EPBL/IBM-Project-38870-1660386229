@@ -9,4 +9,5 @@ Link to dataset is attached [here](https://drive.google.com/drive/folders/1vbl0Y
 * Data Understanding – Accessing and exploring the data to get useful insights from them
 * Feature engineering – Data Manipulation 
 * Data Augmentation – Increasing the amount of data to avoid overfitting 
+* Model building – Building the model using transfer learning approach 
 
