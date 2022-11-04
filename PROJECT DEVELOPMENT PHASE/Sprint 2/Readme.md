@@ -7,6 +7,6 @@
 * Model evaluation and saving - Evaluating the model to check the accuracy and precision 
 * User database creation – contains the details of user 
 * Home page creation – shows features of our application 
-* Login and register page creation - Login through email and password, login through Gmail.
+* Login and register page creation - Login through email and password.
 * Authentication – OTP verification and SSO
 
