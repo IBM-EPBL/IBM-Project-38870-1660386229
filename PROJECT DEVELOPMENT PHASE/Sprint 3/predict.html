@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DIGITAL NATURALIST</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+ <link href="{{url_for('static', filename='images/logo.png') }}" rel="icon">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <script src="{{ url_for('static', filename='javascript/main.js') }}"></script>
+    <script>
+        function validate(){
+        if ( document.getElementById('drop').selectedIndex == 0 ) {
+        alert ( "Please select the species" );
+        return false;
+        }
+        }
+    </script>
+
+</head>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Digital Naturalist</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+            <li><a href="{{url_for('redirect')}}">Home</a></li>
+          <li><a href="{{url_for('home')}}">Logout <i class="bi bi-door-closed"></i></a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+<div>
+    <br>
+<h1 class="blink">Prediction</h1>
+</div>
+  <br>
+  <form method="post" action="{{url_for('show')}}" enctype="multipart/form-data">
+  <div class="dropdwn">
+       <label class="text-white">Species</label>&nbsp
+         <select name = "dropdown" id="drop" required>
+             <option value="none" selected disabled hidden>Select option</option>
+            <option value = "Animals" >Animals</option>
+            <option value = "Flowers">Flowers</option>
+            <option value = "Leaves">Leaves</option>
+             <option value = "Insects">Insects</option>
+             <option value = "Birds">Birds</option>
+             <option value = "Sea Animals">Marine animals</option>
+         </select>
+              </div>
+            <br><br>
+            <div class ="img_upload col-lg-12" align="left">
+                      <br>
+                      <h2>Click here to upload your image</h2>
+                    <br>
+                      <div class="uploadOuter">
+                      <label for="uploadFile" class="btn upload" style="background: #fff;" required >Upload Image</label> &nbsp
+                      <strong>OR</strong>&nbsp
+                    <span class="dragBox" >
+                      Drag and Drop image here
+                    <input type="file" onChange="dragNdrop(event)"  name="image" ondragover="drag()" ondrop="drop()" id="uploadFile" required  />
+                    </span>
+                       <br>   <div id="preview"><br></div>
+                         <br><br>
+                          <button type="submit" class="predict button" value="Predict" onclick="validate()">Predict</button>
+<!--                          <input type="submit" class="predict button" value="Predict" onclick="validate()">-->
+                    </div>
+
+                    <br>
+                     <!-- <form action="/" style="align: center;">
+                        <input type="file" id="myFile" /><br><br>
+                        <input type="Submit" value="Submit" />
+
+                      </form> -->
+</div>
+ </form>
+<br><br><br><br><br>
+</body>
+<!-- ======= Footer ======= -->
+  <footer id="footer" class="footer ftr">
+
+    <div class="container">
+        <div class="social-links d-flex mt-4" style="justify-content:center">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+
+    </div>
+<br>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Digital Naturalist</span></strong>. All Rights Reserved
+      </div>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+<style>
+  body
+  {
+  background-image:url("static/images/bg1.jpg");
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  background-size:cover;
+  }
+  .upload:hover
+{
+color:black;
+transform: scale(1.1);
+transition: 0.3s all ease-in-out;
+}
+    .ftr
+    {
+    font-size: 14px;
+  background-color: var(--color-primary);
+  padding: 5px 0;
+  color: white;
+    }
+    #drop{
+    border-radius:10px;
+    border: 3px solid;
+    width: 13%;
+    }
+    .blink{
+    text-align:center;
+    color:white;
+    }
+    .button:hover
+{
+transform: scale(1.1);
+transition: 0.3s all ease-in-out;
+}
+    .button {
+  position: relative;
+  background: #000;
+  border: 0;
+  padding: 14px 30px;
+  font-family: "Helvetica";
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 0.1em;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  transition: all 0.2s ease;
+}
+.button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -200%;
+  width: 200%;
+  height: 100%;
+  transform: skewX(-20deg);
+  background-image: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+}
+.button:hover:after {
+  animation: shine 1.6s ease;
+}
+.button:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.cntr {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@-moz-keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
+@-o-keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 200%;
+  }
+}
+
+</style>
+
+
+</html>

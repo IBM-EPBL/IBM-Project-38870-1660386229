@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DIGITAL NATURALIST</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{url_for('static', filename='images/logo.png') }}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+    <style>
+    body
+    {
+    background-color: #D3FCF6;
+    }
+    .pred-img {
+  width: 300px;
+  height: 300px;
+  border:2px solid #fff;
+  background: url(img/duck.png) no-repeat;
+  -moz-box-shadow: 0px 6px 5px #ccc;
+  -webkit-box-shadow: 0px 6px 5px #ccc;
+  box-shadow: 0px 6px 5px #ccc;
+  -moz-border-radius:190px;
+  -webkit-border-radius:190px;
+  border-radius:190px;
+}
+.box
+{
+border-style:solid;
+border-radius:15px 15px;
+}
+    </style>
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Digital Naturalist</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="{{url_for('redirect')}}">Home</a></li>
+          <li><a href="{{url_for('home')}}">Logout <i class="bi bi-door-closed"></i></a></li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+    <br>
+  <div class="container" style="padding-top:100px; padding-bottom:100px;">
+      <div class="row gy-8" >
+          <div class="col-lg-1"></div>
+          {% if flag %}
+      <div class="col-lg-4">
+          <img style="align-items:center" class="pred-img" src="data:image/jpeg;base64,{{value}}" >
+      </div>
+      <div class="col-lg-6 box">
+          <br>
+          <h1 style="text-align:center; color:Red;"><b>Prediction: {{pred}}</b></h1><br>
+          <p style="text-align:justify; color:black; text-justify: inter-word;"> {{content}}</p><br>
+      </div>
+          <div class="col-lg-1"></div>
+
+      {% endif %}
+      </div>
+      <br><br>
+      <a href="{{url_for('predict')}}"><button type="button" class="btn btn-primary" style="float:right; color:white" >Predict More &nbsp <i class="bi bi-arrow-right"></i> </button></a>
+<br>
+  </div>
+
+
+</body>
+
+<!-- ======= Footer ======= -->
+  <footer id="footer" class="footer ftr">
+
+    <div class="container">
+        <div class="social-links d-flex mt-4" style="justify-content:center">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+
+    </div>
+<br>
+      <div class="copyright">
+        &copy; Copyright <strong><span>Digital Naturalist</span></strong>. All Rights Reserved
+      </div>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+<style>
+    .ftr
+    {
+    font-size: 14px;
+  background-color: var(--color-primary);
+  padding: 5px 0;
+  color: white;
+    }
+</style>
+
+
+</html>
