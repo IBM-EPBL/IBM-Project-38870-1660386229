@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>DIGITAL NATURALIST</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/images/logo.png" rel="icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="{{url_for('home')}}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Digital Naturalist</h1>
+      </a>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#stats-counter">Demographics</a></li>
+          <li><a href="#team">Rare Species</a></li>
+          <li><a href="#about">About</a></li>
+          <li class="dropdown"><a href="#"><span>Profile</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a class="dropdown-item"><span class="bi bi-person"></span> &nbsp Welcome , {{name}} &nbsp &nbsp</a></li>
+              <li><a class="dropdown-item" href="{{url_for('home')}}" style="color:black"><span class="bi bi-door-closed">&nbsp Logout</span></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row-right justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Digital Naturalist</h2>
+            <p data-aos="fade-up">AI - ENABLED TOOL FOR BIODIVERSITY RESEARCHERS</p>
+            <a data-aos="fade-up" data-aos-delay="200" href="{{url_for('predict')}}" class="btn-get-started">Start Prediction<i class="bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(static/images/Nature/img-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/images/Nature/img-5.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+
+
+  <main id="main">
+
+    <!-- ======= Stats Counter Section ======= -->
+    <section id="stats-counter" class="stats-counter">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4 align-items-center">
+
+          <div class="col-lg-6">
+            <img style="box-shadow:5px 5px 15px" class="img" src="https://images.pexels.com/photos/6796912/pexels-photo-6796912.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="70543" data-purecounter-duration="5" class="purecounter"></span>
+              <p><strong>Plant species</strong> are utilized for medicine.</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="207350" data-purecounter-duration="5" class="purecounter"></span>
+              <p><strong>Glasses of milk</strong> from a cow during its entire lifetime.</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="81408" data-purecounter-duration="5" class="purecounter"></span>
+              <p><strong>Edible plant</strong> species around the world.</p>
+            </div><!-- End Stats Item -->
+
+            <div class="stats-item d-flex align-items-center">
+              <span data-purecounter-start="0" data-purecounter-end="38810" data-purecounter-duration="5" class="purecounter"></span>
+              <p><strong>Species threatened </strong>till the year 2022.</p>
+            </div><!-- End Stats Item -->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Stats Counter Section -->
+
+
+    <!-- ======= Call To Action Section ======= -->
+    <section id="call-to-action" class="call-to-action">
+      <div class="container text-center" data-aos="zoom-out">
+        <h3>Check out for more rare species in the world</h3>
+        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+
+      </div>
+    </section><!-- End Call To Action Section -->
+
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>RARE SPECIES</h2>
+        </div>
+
+        <div class="row gy-4 ">
+
+          <div class=" col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="100">
+            <div class=" flip-card-inner" >
+            <div class="member flip-card-front">
+              <img style="width: 500px;" src="{{ url_for('static',filename='images/Rare species/Angel Shark.jpeg')}}" class="img-fluid" alt="">
+              <h4>Angel Shark</h4>
+
+            </div>
+            <div class="flip-card-back">
+                    Count: 26 species<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Chordata<br>
+                    Class:	Chondrichthyes<br>
+                    Subclass:	Elasmobranchii<br>
+                    Infraclass:	Euselachii
+            </div>
+          </div>
+
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="flip-card-inner">
+              <div class="member flip-card-front">
+              <img style="height:185px" src="{{url_for('static', filename='images/Rare species/Baobab tree.jpg')}}" class="img-fluid" alt="">
+              <h4>Baobab Tree</h4>
+
+            </div>
+              <div class="flip-card-back">
+                    Count: one million<br>
+                    Kingdom:	Plantae<br>
+                    Division:	Magnoliophyta<br>
+                    Class:	Magnoliopsida<br>
+                    Order:	Malvales<br>
+                    Family:	Malvaceae
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="flip-card-inner">
+              <div class="member flip-card-front">
+              <img style="height:185px" src="{{url_for('static', filename='images/Rare species/Barbara Buttons.jpg')}}" class="img-fluid" alt="">
+              <h4>Barbara’s Buttons</h4>
+            </div>
+              <div class="flip-card-back">
+                Kingdom:	Plantae<br>
+                    Clade:	Tracheophytes<br>
+                    Clade:	Angiosperms<br>
+                    Order:	Asterales<br>
+                    Family:	Asteraceae<br>
+                    Subfamily:	Asteroideae
+              </div>
+            </div>
+
+          </div><!-- End Team Member -->
+
+
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+              <div class="member flip-card-front">
+              <img style="height:185px" src="{{url_for('static',filename='images/Rare species/BlackRhino-Sumatran Rhinoceros.jpg')}}" class="img-fluid" alt="">
+              <h4>Sumatran Rhinoceros</h4>
+            </div>
+              <div class="flip-card-back">
+                    Count: Fewer then 80<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Chordata<br>
+                    Class:	Mammalia<br>
+                    Order:	Perissodactyla<br>
+                    Family:	Rhinocerotidae<br>
+                    Genus:	Dicerorhinus
+            </div>
+              </div>
+
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+              <div class="member flip-card-front">
+              <img src="{{url_for('static',filename='images/Rare species/Peacock tarantula.jpg')}}" class="img-fluid" alt="">
+              <h4>Peacock tarantula</h4>
+            </div>
+              <div class="flip-card-back">
+                    Count: 1,040 species<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Arthropoda<br>
+                    Subphylum:	Chelicerata<br>
+                    Class:	Arachnida<br>
+                    Order:	Araneae<br>
+                    Infraorder:	Mygalomorphae
+              </div>
+            </div>
+
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+               <div class="member flip-card-front">
+              <img src="{{url_for('static',filename='images/Rare species/Resplendent quetzal (Pharomachrus mocinno).jpeg')}}" class="img-fluid" alt="">
+              <h4>Resplendent quetzal</h4>
+            </div>
+            <div class="flip-card-back">
+                    Count: 50000<br>
+                    Kingdom:	Animalia<br>
+                    Phylum:	Chordata<br>
+                    Class:	Aves<br>
+                    Order:	Trogoniformes<br>
+                    Family:	Trogonidae<br>
+                    Genus:	Pharomachrus
+            </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+               <div class="member flip-card-front">
+              <img style="height:185px" src="{{url_for('static', filename='images/Rare species/elephant.jpg')}}" class="img-fluid" alt="">
+              <h4>African forest Elephant</h4>
+            </div>
+            <div class="flip-card-back">
+                    Count: 41500<br>
+                    Kingdom:	Animalia <br>
+                    Phylum:	Chordata<br>
+                    Class:	Mammalia<br>
+                    Order:	Proboscidea<br>
+                    Family:	Elephantidae <br>
+                    Genus:	Loxodonta
+            </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-3 col-md-6 d-flex flip-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="flip-card-inner">
+               <div class="member flip-card-front">
+              <img src="{{url_for('static',filename='images/Rare species/Amur leopard.jpg')}}" class="img-fluid" alt="">
+              <h4>Amur leopard</h4>
+            </div>
+            <div class="flip-card-back">
+                    Count: 57<br>
+                    Kingdom:	Animalia <br>
+                    Phylum:	Chordata<br>
+                    Class:	Mammalia<br>
+                    Order:	Carnivora<br>
+                    Suborder:	Feliformia<br>
+                    Family:	Felidae
+            </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Team Section -->
+
+     <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header col-lg-10" style="margin:auto">
+          <h2>About Us</h2>
+          <p id="abt" style="text-align:justify">We are the team of digital naturalist who are intend to give the awareness about the species around the world .We are here to constantly reminds poeple about the reforestation, saving the trees, species and both the wild and domestic animals, and lives.Digital Naturalism investigates the role that Digital Media can play for Biological Field Work. It looks to uphold the naturalistic values of wilderness exploration, while investigating the new abilities offered by digital technology.</p>
+        </div>
+
+        <div class="row gy-4">
+
+        </div>
+
+      </div>
+    </section><!-- End About Us Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-1">
+        <div class="col-lg-6 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Digital Naturalist</span>
+          </a>
+          <p >We are here to constantly reminds poeple about the reforestation, saving the trees, species and both the wild and domestic animals, and lives.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 footer-info"></div>
+
+
+
+        <div class="col-lg-2 col-md-12 footer-contact text-center text-md-start" style="float:right;">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Email:</strong> k2mgs.codexx@gmail.com<br>
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Digital Naturalist</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{{url_for('static',filename='vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/aos/aos.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{url_for('static',filename='vendor/php-email-form/validate.js')}}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{url_for('static',filename='javascript/main.js')}}"></script>
+</body>
+<style>
+  .img
+{
+border-radius:15px;
+}
+  .img:hover
+{
+transform: scale(1.1);
+transition: 0.3s all ease-in-out;
+
+}
+</style>
+</html>

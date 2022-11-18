@@ -1,0 +1,17 @@
+bcrypt==4.0.1
+Flask==2.2.2
+Flask-Bcrypt==1.0.1
+Flask-Login==0.6.2
+Flask-SQLAlchemy==2.5.1
+Flask-WTF==1.0.1
+keras==2.10.0
+numpy==1.22.2
+pandas==1.4.1
+requests==2.27.1
+SQLAlchemy==1.4.42
+tensorflow==2.10.0
+twilio==7.15.0
+wikipedia==1.4.0
+WTForms==3.0.1
+phonenumbers
+Pillow==8.1.1
